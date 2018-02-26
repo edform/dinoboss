@@ -2,14 +2,14 @@
 
   font-family: "rainfall";
 
-src: url("../dinoboss/Fonts/rainfall.otf");
+src: url("./Fonts/rainfall.otf");
 }
 
 @font-face {
 
   font-family: "montserrat";
 
-src: url("../dinoboss/Fonts/montserrat-regular.ttf");
+src: url("./Fonts/montserrat-regular.ttf");
 }
 
 body {
