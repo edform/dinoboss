@@ -1,31 +1,24 @@
 @font-face {
 
-  font-family: "LalezarWF";
+  font-family: "rainfall";
 
-src: url("./Fonts/Lalezar-Regular.otf");
+src: url("../dinoboss/Fonts/rainfall.otf");
 }
 
 @font-face {
 
-  font-family: "KanitWF";
+  font-family: "montserrat";
 
-src: url("../dinoboss/Fonts/Kanit-Regular.ttf");
-}
-
-@font-face {
-
-  font-family: "Eutopia";
-
-src: url("../dinoboss/Fonts/Eutopia.otf");
+src: url("../dinoboss/Fonts/montserrat-regular.ttf");
 }
 
 body {
-  font-family: "KanitWF";
-  color: #63369e;
-  background-color: #DEDCF5;
+  font-family: "montserrat";
+  color: #3E2556;
+  background-color: #FCFAFD;
   font-variant: normal;
   background-image: url("Images/WebsiteDinobossBackgroundTop.png"), url("Images/WebsiteDinobossBackground.png");
-  background-repeat: repeat-x, repeat;
+  background-repeat: no-repeat, repeat-y;
   letter-spacing: normal;
   word-spacing: normal;
   font-size: 20px;
@@ -72,8 +65,8 @@ body {
 }
 
 h1 {
-  font-family: "Eutopia";
-  color: #523777;
+  font-family: "rainfall";
+  color: #95416F;
   letter-spacing: normal;
   word-spacing: normal;
   font-size: 48px;
@@ -89,9 +82,9 @@ h2 {
 }
 
 h3 {
-  font-family: "Eutopia";
+  font-family: "rainfall";
   font-size: 36px;
-  color: #5d3f82;
+  color: #95416F;
   border-top-style: none;
   border-right-style: none;
   border-bottom-style: none;
@@ -138,7 +131,7 @@ form {
 }
 
 input {
-  font-family: "KanitWF";
+  font-family: "montserrat";
   font-size: 22px;
   font-style: normal;
   font-weight: normal;
@@ -203,7 +196,7 @@ textarea
 }
 
 .button {
-  font-family: "LalezarWF";
+  font-family: "rainfall";
   font-size: 26px;
   color: #ffffff;
   background-color: #63369e;
