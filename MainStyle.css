@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat, repeat-y;
   letter-spacing: normal;
   word-spacing: normal;
-  font-size: 20px;
+  font-size: 28px;
   -moz-text-size-adjust: 140%;
   -webkit-text-size-adjust: 140%;
   -ms-text-size-adjust: 140%;
@@ -69,7 +69,7 @@ h1 {
   color: #95416F;
   letter-spacing: normal;
   word-spacing: normal;
-  font-size: 48px;
+  font-size: 50px;
   font-weight: normal;
   -moz-text-size-adjust: 120%;
   -webkit-text-size-adjust: 120%;
@@ -83,7 +83,7 @@ h2 {
 
 h3 {
   font-family: "rainfall";
-  font-size: 36px;
+  font-size: 40px;
   color: #95416F;
   border-top-style: none;
   border-right-style: none;
