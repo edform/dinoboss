@@ -39,7 +39,7 @@ body {
 }
 
 .sq-img-small.img-small-1 {
-  background: url("Images/LogoAndBackground.jpg") no-repeat;
+  background: url("Images/LogoAndBackground_LR.jpg") no-repeat;
 }
 
 /* RETINA */
@@ -50,21 +50,7 @@ body {
     background-size: 2528px 1422px;
     height: 1422px;
     width: 2528px;
-    background: url("Images/LogoAndBackground.jpg") no-repeat;
-  }
-
-  .image-logo-parent {
-      position: relative;
-      overflow: hidden;
-  }
-
-  .image-logo-child {
-      position: absolute;
-      top: -9999px;
-      bottom: -9999px;
-      left: -9999px;
-      right: -9999px;
-      margin: auto;
+    background: url("Images/LogoAndBackground_HRjpg") no-repeat;
   }
 
 
