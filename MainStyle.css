@@ -193,13 +193,13 @@ textarea
 
 .button {
   font-family: "rainfall";
-  font-size: 26px;
+  font-size: 32px;
   color: #ffffff;
   background-color: #63369e;
-  padding-top: 5px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 1px;
+  padding-top: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 10px;
   background-image: none;
   background-repeat: repeat;
   background-attachment: scroll;
