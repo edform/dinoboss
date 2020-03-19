@@ -21,7 +21,6 @@ body {
   background-repeat: no-repeat, repeat-y;
   letter-spacing: normal;
   word-spacing: normal;
-  font-size: 28px;
   -moz-text-size-adjust: 140%;
   -webkit-text-size-adjust: 140%;
   -ms-text-size-adjust: 140%;
@@ -288,4 +287,34 @@ textarea
   to {
     transform: scale3d(1, 1, 1);
   }
+}
+
+@media (min-width: 858px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 780px) {
+    html {
+        font-size: 23px;
+    }
+}
+
+@media (min-width: 702px) {
+    html {
+        font-size: 21px;
+    }
+}
+
+@media (min-width: 724px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 623px) {
+    html {
+        font-size: 17px;
+    }
 }
