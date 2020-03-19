@@ -95,27 +95,27 @@ h3 {
 }
 
 form {
-  background-color: #E3FDFD;
+  background-color: #F1D0DB;
   margin-right: auto;
   margin-left: auto;
-  width: 660px;
+  width: 760px;
   border-top-color: #5d3f82;
   border-right-color: #5d3f82;
   border-bottom-color: #5d3f82;
   border-left-color: #5d3f82;
-  border-top-width: 4px;
-  border-right-width: 4px;
-  border-bottom-width: 4px;
-  border-left-width: 4px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
   border-top-style: solid;
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
   border-radius: 10px;
   padding-top: 0px;
-  padding-right: 5px;
-  padding-bottom: 15px;
-  padding-left: 5px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
 .txtbox {
@@ -139,10 +139,10 @@ input {
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  border-top-width: 4px;
-  border-right-width: 4px;
-  border-bottom-width: 4px;
-  border-left-width: 4px;
+  border-top-width: 3px;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-left-width: 3px;
   border-top-style: solid;
   border-right-style: solid;
   border-bottom-style: solid;
@@ -160,10 +160,6 @@ input[type="text"] {
 
 input[type="email"] {
   width: 300px;
-  border-top-width: 4px;
-  border-right-width: 4px;
-  border-bottom-width: 4px;
-  border-left-width: 4px;
 }
 
 input[type="text"]:focus {
@@ -251,7 +247,7 @@ textarea
 
 @keyframes flashanim {
       from {
-        background-color: #63369e;
+        background-color: #CC0066;
       }
 
       50% {
@@ -259,7 +255,7 @@ textarea
       }
 
       to {
-        background-color: #63369e;
+        background-color: #CC0066;
       }
 }
 
