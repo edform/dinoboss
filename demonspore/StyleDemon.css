@@ -1,0 +1,330 @@
+@font-face {
+
+  font-family: "rainfall";
+
+src: url("/Fonts/rainfall.otf");
+}
+
+@font-face {
+
+  font-family: "montserrat";
+
+src: url("/Fonts/montserrat-regular.ttf");
+}
+
+body {
+  font-family: "montserrat";
+  color: #FFB170;
+  background-color: #000D10;
+  font-variant: normal;
+  background-repeat: no-repeat;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-size: 24px;
+  -moz-text-size-adjust: 140%;
+  -webkit-text-size-adjust: 140%;
+  -ms-text-size-adjust: 140%;
+    background-position: center top;
+    text-align: center;
+}
+
+
+/* NON RETINA */
+
+/* style for all square images so no need to repeat */
+.sq-img-small {
+  background-size: 2528px 1422px;
+  height: 1422px;
+  width: 2528px;
+}
+
+.sq-img-small.img-small-1 {
+  background: url("Images/LogoAndBackground_LR.jpg") no-repeat;
+}
+
+/* RETINA */
+@media
+  (-webkit-min-device-pixel-ratio: 2),(-moz-device-pixel-ratio: 2), (min-resolution: 192dppx) {
+
+  .sq-img-small.img-small-1 {
+    background-size: 2528px 1422px;
+    height: 1422px;
+    width: 2528px;
+    background: url("Images/LogoAndBackground_HRjpg") no-repeat;
+  }
+
+
+.image-logo {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   -webkit-transform: translateY(-60%) translateX(-50%);
+}
+
+
+.column-left {
+  float: left;
+  width: 33%;
+}
+
+.column-right {
+  float: right;
+  width: 33%;
+}
+
+.column-center {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.halfscaledimage {
+  transform: scale(0.5);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.screenshots {
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  transform: scale(0.5);
+}
+
+h1 {
+  font-family: "rainfall";
+  color: #FF9848;
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-size: 50px;
+  font-weight: normal;
+  -moz-text-size-adjust: 120%;
+  -webkit-text-size-adjust: 120%;
+  -ms-text-size-adjust: 120%;
+}
+
+h2 {
+  font-size: large;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "rainfall";
+  font-size: 37px;
+  color: #FFE270;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  font-weight: normal;
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+
+form {
+  background-color: #E3FDFD;
+  margin-right: auto;
+  margin-left: auto;
+  width: 660px;
+  border-top-color: #5d3f82;
+  border-right-color: #5d3f82;
+  border-bottom-color: #5d3f82;
+  border-left-color: #5d3f82;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-radius: 10px;
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+}
+
+.txtbox {
+  width: 240px;
+}
+
+.field_label {
+  text-align: right;
+}
+
+.field_input {
+  text-align: left;
+}
+
+input {
+  font-family: "montserrat";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #63369e;
+  border-right-color: #63369e;
+  border-bottom-color: #63369e;
+  border-left-color: #63369e;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  width: 300px;
+}
+
+input[type="email"] {
+  width: 300px;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+input[type="text"]:focus {
+  border-top-color: #333333;
+  border-right-color: #333333;
+  border-bottom-color: #333333;
+  border-left-color: #333333;
+  border-top-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+
+input[type="submit"] {
+animation-name: flashanim;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+
+textarea
+{
+   font-size: 16px;
+}
+
+
+.attentiongrabberbutton {
+    animation-name: flashanim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.button {
+  font-family: "rainfall";
+  font-size: 26px;
+  color: #ffffff;
+  background-color: #63369e;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 1px;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  cursor: pointer;
+  border-radius: 12px;
+
+    position: relative;
+    border: none;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button:active {
+  animation-name: buttonanimonclick;
+  animation-duration: 1s;
+}
+
+
+@keyframes buttonanimonclick {
+      from {
+        background-color: #DEDCF5;
+      }
+
+      50% {
+        background-color: #63369e;
+      }
+
+      to {
+        background-color: #DEDCF5;
+      }
+}
+
+@keyframes flashanim {
+      from {
+        background-color: #63369e;
+      }
+
+      50% {
+        background-color: #DEDCF5;
+      }
+
+      to {
+        background-color: #63369e;
+      }
+}
+
+@keyframes flashanimborder {
+      from {
+        border-color: #63369e;
+        background-color: #FFFFFF;
+      }
+
+      50% {
+        border-color: #DEDCF5;
+        background-color: #ccc9f2;
+      }
+
+      to {
+        border-color: #63369e;
+        background-color: #FFFFFF;
+      }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
