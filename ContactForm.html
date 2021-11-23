@@ -7,10 +7,6 @@
           <meta content="Ed Kay" name="author">
           <meta content="DinoBoss is a video game development studio specialising in visceral, atmospheric and emergent experiences, which sometimes involve throwing goats off mountains." name="description">
 
-					<style type="text/css">
-						.antispam { display:none;}
-					</style>
-
 </head>
 
 <body>
@@ -22,34 +18,73 @@
 		<h1>GET IN TOUCH<img src="Images/WebsiteLineBreak.png"></h1>
 	<p>
 
+		<!--
+			<script src="js/jquery.min.js"></script>
+			<script type="text/javascript">var submitted=false;</script>
+			<script type="text/javascript">
+			$('#gform').on('submit', function(e)
+			{
+				$('#gform *').fadeOut(2000);
+				$('#gform').prepend('Thanks for getting in touch!');
+				$('#myResultDiv').text("Form submitted");
+						alert('Form submitted!');
+				});
+		});
+			</script>
+		-->
+
 	Use the following form to send me a message.</p><br>
 
-		<script src="js/jquery.min.js"></script>
-		<script type="text/javascript">var submitted=false;</script>
-		<script type="text/javascript">
-		$('#gform').on('submit', function(e) {
-		  $('#gform *').fadeOut(2000);
-		  $('#gform').prepend('Thanks for getting in touch!');
-		  });
-		</script>
 
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-			
-	<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+	<form name="gform" id="gform" class="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse?" target="hidden_iframe" onsubmit="return onFormSubmission();">
 		<br>
 	  Your name:<br>
-	  <input type="text" name="entry.1210582692" id="entry.1210582692">
+	  <input type="text" name="entry.1210582692" id="entry.1210582692" placeholder="your name" class="text" type="text">
 		<br><br>
 	  Your email:<br>
-	  <input type="text" name="entry.92797013" id="entry.92797013">
+	  <input type="text" name="entry.92797013" id="entry.92797013" placeholder="you@yourdomain.com" class="text" type="text">
 		<br><br>
 	  Your message:<br>
-	  <textarea type="text" name="entry.653295125" id="entry.653295125" rows="10" cols="50"></textarea>
+	  <textarea type="text" name="entry.653295125" id="entry.653295125" rows="10" cols="50"
+		maxlength="1000" placeholder="Your exciting message" class="text" type="text"></textarea>
 		<br><br>
-	  <input type="submit" value="Submit">
+	  <input type="submit" value="Submit" name="SubmitButton">
 		<br>
 		<br>
 	</form>
+
+
+		<!-- This previously had the property 'onload="if(submitted) {}"' and was meant to show on the form being submitted but I could not get it to work so I replaced with the message in FormSubmissionText -->
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+	<h2><p id="FormSubmissionText"></p></h2>
+
+	  <!-- NOTE: It's critically important where the script is put. The 'FormSubmissionText' element has to appear before this script -->
+		<script>
+			function fade(element)
+			{
+		    var op = 1;  // initial opacity
+		    var timer = setInterval(function () {
+		        if (op <= 0.1){
+		            clearInterval(timer);
+		            element.style.display = 'none';
+		        }
+		        element.style.opacity = op;
+		        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+		        op -= op * 0.1;
+		    }, 20);
+			}
+
+			function onFormSubmission()
+			{
+				  document.getElementById("FormSubmissionText").innerHTML = "Thanks for getting in touch!";
+					fade(gform);
+			    /* alert('Form submitted!'); */
+
+					/* IMPORTANT: return true here or it will completely fail to submit the form! */
+			    return true;
+			}
+		</script>
 
 	<br>
 	  <p><a target="_top" title="Back to main website" href="index.html">Back to
