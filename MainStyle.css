@@ -15,15 +15,15 @@ src: url("/Fonts/montserrat-regular.ttf");
 body {
   font-family: "montserrat";
   color: #3E2556;
-  background-color: #FCFAFD;
+  background-color: #F3FFFF;
   font-variant: normal;
   background-image: url("Images/WebsiteDinobossBackgroundTop.png"), url("Images/WebsiteDinobossBackground.png");
   background-repeat: no-repeat, repeat-y;
   letter-spacing: normal;
   word-spacing: normal;
-  -moz-text-size-adjust: 140%;
-  -webkit-text-size-adjust: 140%;
-  -ms-text-size-adjust: 140%;
+  -moz-text-size-adjust: 200%;
+  -webkit-text-size-adjust: 200%;
+  -ms-text-size-adjust: 200%;
     background-position: center top;
     text-align: center;
 }
@@ -70,9 +70,9 @@ h1 {
   word-spacing: normal;
   font-size: 50px;
   font-weight: normal;
-  -moz-text-size-adjust: 120%;
-  -webkit-text-size-adjust: 120%;
-  -ms-text-size-adjust: 120%;
+  -moz-text-size-adjust: 200%;
+  -webkit-text-size-adjust: 200%;
+  -ms-text-size-adjust: 200%;
 }
 
 h2 {

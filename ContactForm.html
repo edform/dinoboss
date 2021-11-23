@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+<head>
+					<meta http-equiv="content-type" content="text/html; charset=utf-8">
+          <title>DinoBoss - Contact Form</title>
+          <link href="MainStyle.css" rel="stylesheet" type="text/css">
+          <meta content="Ed Kay" name="author">
+          <meta content="DinoBoss is a video game development studio specialising in visceral, atmospheric and emergent experiences, which sometimes involve throwing goats off mountains." name="description">
+
+					<style type="text/css">
+						.antispam { display:none;}
+					</style>
+
+</head>
+
+<body>
+
+		<br><br><br>
+		<br><img alt="DinoBoss Logo" src="Images/LogoDinoBoss.png" title="DinoBoss Logo"><br><br><br>
+
+			<div class="container">
+		<h1>GET IN TOUCH<img src="Images/WebsiteLineBreak.png"></h1>
+	<p>
+
+	Use the following form to send me a message.</p><br>
+
+
+
+	<form method="post" action="ContactFormSubmit.php">
+		<br>
+		<p>Your name:
+		<br /><input name="name" /></p>
+
+		<p>Your email:
+		<br /><input name="email" /></p>
+
+		<!-- Important: if you add any fields to this page, you will also need to update the php script -->
+
+		<p class="antispam">Leave this empty:
+		<br /><input name="url" /></p>
+
+		<p>Your message:
+		<br /><textarea name="message" rows="10" cols="50"></textarea></p>
+
+		<p><input type="submit" value="Send" /></p>
+		<br>
+
+	</form>
+
+
+</body>
+</html>
