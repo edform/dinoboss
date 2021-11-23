@@ -24,6 +24,17 @@
 
 	Use the following form to send me a message.</p><br>
 
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript">var submitted=false;</script>
+		<script type="text/javascript">
+		$('#gform').on('submit', function(e) {
+		  $('#gform *').fadeOut(2000);
+		  $('#gform').prepend('Thanks for getting in touch!');
+		  });
+		</script>
+
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+			
 	<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
 		<br>
 	  Your name:<br>
@@ -39,17 +50,6 @@
 		<br>
 		<br>
 	</form>
-
-	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script type="text/javascript">var submitted=false;</script>
-	<script type="text/javascript">
-	$('#gform').on('submit', function(e) {
-	  $('#gform *').fadeOut(2000);
-	  $('#gform').prepend('Thanks for getting in touch!');
-	  });
-	</script>
 
 	<br>
 	  <p><a target="_top" title="Back to main website" href="index.html">Back to
