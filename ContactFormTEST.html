@@ -24,7 +24,7 @@
 
 
 	<form id="contact-form" enctype="text/plain"
-	  action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse"  target="hidden_iframe" onsubmit="submitted=true;">
+	  action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse"  target="hidden_iframe" onsubmit="return onFormSubmission();">
 		<br>
 	    <label for="entry.1210582692">Name<br></label>
 	    <input type="text" name="entry.1210582692" class="text"
@@ -53,7 +53,7 @@
 			</button>
 	  <br><br>
 	</form>
-	
+
 	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 		<h4><p id="FormSubmissionText"></p></h4>
@@ -77,13 +77,23 @@
 		 				{
 		           grecaptcha.execute('6Lf2X4YgAAAAAL9VQl6j4rnesIgcQaENb6jmCUg0', {action: 'submit'}).then(function(token) {
 		               // Add your logic to submit to your backend server here.
-		  						 var msg = 'Thanks for getting in touch!';
+		  						 var msg = 'Thanks for your message.';
 
 		  							document.getElementById('contact-form').style.display = "none";
 		  							document.getElementById('contact-success').innerHTML = msg;
 		         });
 		       });
 		 		}
+
+		function onFormSubmission()
+		{
+			  document.getElementById("FormSubmissionText").innerHTML = "Thanks for getting in touch!";
+				fade(gform);
+		    /* alert('Form submitted!'); */
+
+				/* IMPORTANT: return true here or it will completely fail to submit the form! */
+		    return true;
+		}
 
 	</script>
 
