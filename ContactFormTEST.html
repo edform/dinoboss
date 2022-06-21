@@ -23,7 +23,7 @@
 	Use the following form to send a message.</p><br>
 
 
-	<form id="contact-form" enctype="text/plain" onsubmit="submitForm(event);"
+	<form id="contact-form" enctype="text/plain"
 	  action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse">
 		<br>
 	    <label for="entry.1210582692">Name<br></label>
@@ -58,7 +58,7 @@
 
 	<div id="contact-success"></div>
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
+		<script src="https://www.google.com/recaptcha/api.js?render=6Lf2X4YgAAAAAL9VQl6j4rnesIgcQaENb6jmCUg0"></script>
 
   <!-- NOTE: It's critically important where the script is put. The 'FormSubmissionText' element has to appear before this script -->
 	<script type="text/javascript">
@@ -68,17 +68,21 @@
 	     document.getElementById("contact-form").submit();
 	   }
 
-	  function submitForm(e)
-		{
-	    var msg = 'Thanks for getting in touch!';
+		     function onClick(e)
+		  		 {
+		         e.preventDefault();
+		         grecaptcha.ready(function()
+		 				{
+		           grecaptcha.execute('6Lf2X4YgAAAAAL9VQl6j4rnesIgcQaENb6jmCUg0', {action: 'submit'}).then(function(token) {
+		               // Add your logic to submit to your backend server here.
+		  						 var msg = 'Thanks for getting in touch!';
 
-	    // simulate feel of connection with timeout
-	    setTimeout(function()
-			{
-	      document.getElementById('contact-form').style.display = "none";
-	      document.getElementById('contact-success').innerHTML = msg;
-	    }, 300);
-	  }
+		  							document.getElementById('contact-form').style.display = "none";
+		  							document.getElementById('contact-success').innerHTML = msg;
+		         });
+		       });
+		 		}
+
 	</script>
 
 	<br>
