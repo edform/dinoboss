@@ -1,4 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- https://developers.google.com/recaptcha/docs/v3 -->
+<!-- https://nanobasis.com/2018/10/29/contact-form-recaptcha-google-forms-email-delivery.html -->
 <html dir="ltr" lang="en">
 <head>
 					<meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -18,83 +20,71 @@
 		<h1>GET IN TOUCH<img src="Images/WebsiteLineBreak.png"></h1>
 	<p>
 
-		<!--
-			<script src="js/jquery.min.js"></script>
-			<script type="text/javascript">var submitted=false;</script>
-			<script type="text/javascript">
-			$('#gform').on('submit', function(e)
-			{
-				$('#gform *').fadeOut(2000);
-				$('#gform').prepend('Thanks for getting in touch!');
-				$('#myResultDiv').text("Form submitted");
-						alert('Form submitted!');
-				});
-		});
-			</script>
-		-->
-
-	Use the following form to send me a message.</p><br>
+	Use the following form to send a message.</p><br>
 
 
-	<form name="gform" id="gform" class="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse?" target="hidden_iframe" onsubmit="return onFormSubmission();">
+	<form id="contact-form" target="hidden_iframe" enctype="text/plain" onsubmit="submitForm(event);"
+	  action="https://docs.google.com/forms/d/e/1FAIpQLSf6z1yJZZ3-aPPU_YbLIUnCfn171lRx6CiT8Gj_cXEjf-0KLg/formResponse">
 		<br>
-	  Your name:<br>
-	  <input type="text" name="entry.1210582692" id="entry.1210582692" placeholder="your name" class="text" type="text">
-		<br><br>
-	  Your email:<br>
-	  <input type="text" name="entry.92797013" id="entry.92797013" placeholder="you@yourdomain.com" class="text" type="text">
-		<br><br>
-	  Your message:<br>
+	    <label for="entry.1210582692">Name<br></label>
+	    <input type="text" name="entry.1210582692" class="text"
+	      placeholder="Enter your name..." value="" required />
+	  <br><br>
+	    <label for="entry.92797013">E-mail Address<br></label>
+	    <input type="email" name="entry.92797013" class="text"
+	      placeholder="Enter your email address..." value="" required />
+	  <br><br>
+	    <label for="entry.653295125">Message<br></label>
+				  <textarea type="text"
+						name="entry.653295125"
+						rows="12"
+						style="position: relative; width: 90%;"
+						maxlength="1000"
+						placeholder="Type your message here..."
+						class="text"
+						type="text">
+					</textarea>
+	  <br><br>
 
-	  <textarea type="text"
-			name="entry.653295125"
-			id="entry.653295125"
-			rows="12"
-			style="position: relative; width: 90%;"
-			maxlength="1000"
-			placeholder="Your exciting message"
-			class="text"
-			type="text">
-		</textarea>
+	  <input id="google-recaptcha" type="hidden" name="entry.1409996709" value="" required />
 
-		<br><br>
-	  <input type="submit" value="Submit" name="SubmitButton">
-		<br>
-		<br>
+	  <br><br>
+	    <input id="button-submit" type="submit" value="Submit" disabled />
+	  <br><br>
 	</form>
 
 
-		<!-- This previously had the property 'onload="if(submitted) {}"' and was meant to show on the form being submitted but I could not get it to work so I replaced with the message in FormSubmissionText -->
-	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+			<!-- This previously had the property 'onload="if(submitted) {}"' and was meant to show on the form being submitted but I could not get it to work so I replaced with the message in FormSubmissionText -->
+		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
-	<h4><p id="FormSubmissionText"></p></h4>
+		<h4><p id="FormSubmissionText"></p></h4>
 
-	  <!-- NOTE: It's critically important where the script is put. The 'FormSubmissionText' element has to appear before this script -->
-		<script>
-			function fade(element)
-			{
-		    var op = 1;  // initial opacity
-		    var timer = setInterval(function () {
-		        if (op <= 0.1){
-		            clearInterval(timer);
-		            element.style.display = 'none';
-		        }
-		        element.style.opacity = op;
-		        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-		        op -= op * 0.1;
-		    }, 20);
-			}
+	<div id="contact-success"></div>
 
-			function onFormSubmission()
-			{
-				  document.getElementById("FormSubmissionText").innerHTML = "Thanks for getting in touch!";
-					fade(gform);
-			    /* alert('Form submitted!'); */
+<script src="https://www.google.com/recaptcha/api.js?render=6Lf2X4YgAAAAAL9VQl6j4rnesIgcQaENb6jmCUg0"></script>
 
-					/* IMPORTANT: return true here or it will completely fail to submit the form! */
-			    return true;
-			}
-		</script>
+  <!-- NOTE: It's critically important where the script is put. The 'FormSubmissionText' element has to appear before this script -->
+	<script type="text/javascript">
+	  grecaptcha.ready(function() {
+	    grecaptcha.execute('6Lf2X4YgAAAAAL9VQl6j4rnesIgcQaENb6jmCUg0', {action: 'contact_form'})
+	    .then(function(token) {
+	      // copy recaptcha response to hidden input
+	      document.getElementById('google-recaptcha').value = token;
+	      // enable form submit
+	      document.getElementById('button-submit').disabled = false;
+	    });
+	  });
+
+	  function submitForm(e) {
+	    var msg = 'Thanks for getting in touch!';
+
+	    // simulate feel of connection with timeout
+	    setTimeout(function() {
+	      document.getElementById('contact-form').style.display = "none";
+	      document.getElementById('contact-success').innerHTML = msg;
+	    }, 300);
+	  }
+	</script>
 
 	<br>
 	  <p><a target="_top" title="Back to main website" href="index.html">Back to
