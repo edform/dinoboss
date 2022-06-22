@@ -69,7 +69,7 @@
 	      // enable form submit
 	      document.getElementById('button-submit').disabled = false;
 
-		    alert('Token is: ' + token);
+		    /* alert('Token is: ' + token); */
 	    });
 	  });
 
@@ -101,7 +101,7 @@
 		function onFormSubmission()
 		{
 			  document.getElementById("contact-success").innerHTML = "Thanks for getting in touch!";
-				fade(contact-form);
+				fade(document.getElementById('contact-form'));
 
 				/* IMPORTANT: return true here or it will completely fail to submit the form! */
 		    return true;
