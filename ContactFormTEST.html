@@ -25,7 +25,7 @@
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 	<form id="contact-form" enctype="text/plain"
-	  action="https://docs.google.com/forms/d/e/1FAIpQLSdGVXy9Ac8cfWzfY-0cVLbzO7QrXrsJPfObl6NknUW5J2t19g/formResponse"  target="hidden_iframe" onsubmit="return submitForm(event);">
+	  action="https://docs.google.com/forms/d/e/1FAIpQLSdGVXy9Ac8cfWzfY-0cVLbzO7QrXrsJPfObl6NknUW5J2t19g/formResponse"  target="hidden_iframe" onsubmit="submitForm(event);">
 		<br>
 	    <label for="entry.1032019492">Name<br></label>
 	    <input type="text" name="entry.1032019492" class="text"
@@ -49,7 +49,7 @@
 
 		  <input id="google-recaptcha" type="hidden" name="entry.66391034" value="" />
 
-	    <input id="button-submit" type="submit" value="Submit" disabled />
+	    <input id="button-submit" type="submit" value="Submit" data-callback='onSubmit' disabled />
 
 	  <br><br>
 	</form>
@@ -71,18 +71,19 @@
 	    });
 	  });
 
-	  function submitForm(e)
-		{
+   function onSubmit(token)
+	 {
+     document.getElementById("contact-form").submit();
+   }
+
+	  function submitForm(e) {
 	    var msg = 'Thanks for getting in touch!!!';
 
 	    // simulate feel of connection with timeout
-	    setTimeout(function()
-			{
+	    setTimeout(function() {
 	      document.getElementById('contact-form').style.display = "none";
 	      document.getElementById('contact-success').innerHTML = msg;
 	    }, 300);
-
-			return true;
 	  }
 	</script>
 
