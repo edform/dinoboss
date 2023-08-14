@@ -14,8 +14,8 @@ src: url("Fonts/montserrat-regular.ttf");
 
 body {
   font-family: "montserrat";
-  color: #3E2556;
-  background-color: #F3FFFF;
+  color: #FFFFFF;
+  background-color: #002D30;
   font-variant: normal;
   background-image: url("Images/WebsiteDinobossBackgroundTop.png"), url("Images/WebsiteDinobossBackground.png");
   background-repeat: no-repeat, repeat-y;
@@ -65,7 +65,7 @@ body {
 
 h1 {
   font-family: "rainfall";
-  color: #95416F;
+  color: #FFFFFF;
   letter-spacing: normal;
   word-spacing: normal;
   font-size: 50px;
@@ -77,7 +77,7 @@ h1 {
 
 h2 {
   font-family: "rainfall";
-  color: #95416F;
+  color: #FFFFFF;
   letter-spacing: normal;
   word-spacing: normal;
   font-size: 50px;
@@ -90,7 +90,7 @@ h2 {
 h3 {
   font-family: "rainfall";
   font-size: 37px;
-  color: #95416F;
+  color: #FFFFFF;
   border-top-style: none;
   border-right-style: none;
   border-bottom-style: none;
@@ -106,7 +106,7 @@ h4 {
 }
 
 form {
-  background-color: #F1D0DB;
+  background-color: #005157;
   margin-right: auto;
   margin-left: auto;
   width: 760px;
@@ -158,10 +158,10 @@ input {
   border-right-style: solid;
   border-bottom-style: solid;
   border-left-style: solid;
-  border-top-color: #63369e;
-  border-right-color: #63369e;
-  border-bottom-color: #63369e;
-  border-left-color: #63369e;
+  border-top-color: #FF525B;
+  border-right-color: #FF525B;
+  border-bottom-color: #FF525B;
+  border-left-color: #FF525B;
   border-radius: 5px;
 }
 
@@ -243,6 +243,26 @@ textarea
   animation-duration: 1s;
 }
 
+/* unvisited link */
+a:link {
+  color: #52F5FF; /* cyan */
+}
+
+/* visited link */
+a:visited {
+  color: #FF525B;  /* red */
+}
+
+/* mouse over link */
+a:hover {
+  color: #FFA952;  /* orange */
+}
+
+/* selected link */
+a:active {
+  color: #FFFA52;    /* yellow */
+}
+
 
 @keyframes buttonanimonclick {
       from {
@@ -260,7 +280,7 @@ textarea
 
 @keyframes flashanim {
       from {
-        background-color: #CC0066;
+        background-color: #FF525B;
       }
 
       50% {
@@ -268,7 +288,7 @@ textarea
       }
 
       to {
-        background-color: #CC0066;
+        background-color: #FF525B;
       }
 }
 
