@@ -15,7 +15,7 @@ src: url("Fonts/montserrat-regular.ttf");
 body {
   font-family: "montserrat";
   color: #FFFFFF;
-  background-color: #002D30;
+  background-color: #000A0A;
   font-variant: normal;
   background-image: url("Images/WebsiteDinobossBackgroundTop.png"), url("Images/WebsiteDinobossBackground.png");
   background-repeat: no-repeat, repeat-y;
